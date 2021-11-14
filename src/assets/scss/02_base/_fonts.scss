@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+@function getFontname($font) {
+  @return #{$font}, sans-serif;
+}
+
+$font-family: (
+  headingFont: getFontname("Merriweather Sans"),
+  textFont: getFontname("Quicksand"),
+);
+
+$text-size: (
+  smallSize: 12px,
+  mediumSize: 14px,
+  bigSize: 16px,
+);
+
+$heading-size: (
+  smallSize: 20px,
+  mediumSize: 28px,
+  bigSize: 36px,
+);
+
+$text-weight: (
+  ligherWeight: 400,
+  mediumWeight: 600,
+  bolderWeight: 800,
+);

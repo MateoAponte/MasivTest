@@ -3,16 +3,26 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: [
-    'plugin:vue/essential',
-    '@vue/airbnb',
-    '@vue/typescript/recommended',
-  ],
+  parser: "vue-eslint-parser",
   parserOptions: {
-    ecmaVersion: 2020,
+    parser: require.resolve("@typescript-eslint/parser"),
+    extraFileExtensions: [".vue"],
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
+  plugins: ["prettier", "@typescript-eslint", "vue", "prettier"],
+  extends: [
+    "eslint:recommended",
+    "plugin:vue/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+  ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    indent: [2, "tab"],
   },
 };
