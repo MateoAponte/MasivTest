@@ -10,7 +10,7 @@ phases:
       - npm run build
   post_build:
     commands:
-      - aws s3 cp ./dist s3://www.masivtest.io
+      - aws s3 cp ./dist/js s3://www.masivtest.io --recursive --acl public-read
 
 artifacts:
   files:
