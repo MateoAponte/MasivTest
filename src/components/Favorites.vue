@@ -7,7 +7,12 @@
 			<font-awesome-icon class="favorites-comic__close" icon="times" @click="udpateIsOpen(false)" />
 		</div>
 		<div class="favorites-comic__content">
-			<div v-for="(item, index) in comicsArray" :key="index" class="favorites-comic__item">
+			<div
+				v-for="(item, index) in comicsArray"
+				:key="index"
+				class="favorites-comic__item"
+				@click="navegateToComic(item)"
+			>
 				<img :src="item.img" class="favorites-comic__miniature" />
 				<div class="favorites-comic__description">
 					<span class="favorites-comic__name">{{ item.title }}</span>
@@ -22,7 +27,9 @@
 		</div>
 		<div class="favorites-comic__tab" @click="udpateIsOpen(true)">
 			<font-awesome-icon class="favorities-tab__icon" icon="heart" />
-			<span class="favorities-tab__count">{{ comicsArray.length }}</span>
+			<span v-if="comicsArray.length > 0" class="favorities-tab__count">{{
+				comicsArray.length
+			}}</span>
 		</div>
 	</section>
 </template>
@@ -30,6 +37,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import ComicTypes from "@/constants/comics/types";
+import { ComicPreviewModel } from "@/models/comics/comicModel";
 
 @Component({
 	name: "Favorites",
@@ -52,6 +60,9 @@ export default class Favorities extends Vue {
 	}
 	udpateIsOpen(value: boolean) {
 		this.isOpen = value;
+	}
+	navegateToComic(value: ComicPreviewModel) {
+		this.$store.dispatch(ComicTypes.actions.FETCH_COMICS, value.num);
 	}
 
 	mounted() {

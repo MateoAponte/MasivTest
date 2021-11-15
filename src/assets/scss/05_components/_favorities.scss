@@ -10,6 +10,7 @@
   left: 0px;
   margin: auto;
   box-sizing: border-box;
+  z-index: 20;
 
   &--open {
     left: 0;
@@ -29,6 +30,10 @@
     padding: 8px 0px;
     &:not(:nth-last-child(1)) {
       border-bottom: 1px solid map-get($colors, colorGreyDark--1);
+    }
+    &:hover {
+      background-color: map-get($colors, colorGrey--1);
+      cursor: pointer;
     }
   }
   &__content {

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap");
 
 @function getFontname($font) {
   @return #{$font}, sans-serif;
@@ -8,6 +9,7 @@
 $font-family: (
   headingFont: getFontname("Comic Neue"),
   textFont: getFontname("Lato"),
+  footerFont: getFontname("Jost"),
 );
 
 $text-size: (

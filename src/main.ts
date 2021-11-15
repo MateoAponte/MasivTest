@@ -12,10 +12,11 @@ import {
 	faTrash,
 	faTimes,
 	faHeart,
+	faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faChevronCircleLeft, faChevronCircleRight, faTrash, faTimes, faHeart);
+library.add(faChevronCircleLeft, faChevronCircleRight, faTrash, faTimes, faHeart, faLaptopCode);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
