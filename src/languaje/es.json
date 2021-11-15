@@ -2,5 +2,11 @@
   "main_texts": {
     "random_buttom": "Comic aleatorio",
     "favorites_header": "Tus favoritos"
+  },
+  "footer_texts": {
+    "gratitude": "Hecho por",
+    "project": "Prueba comic - Masiv",
+    "love": "Con mucho ",
+    "developer_name": "Mateo Aponte M"
   }
 }

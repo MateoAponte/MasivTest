@@ -1,4 +1,5 @@
 .comic {
+  height: calc(100vh - 80px);
   @include flexUtilities();
   .preview-section {
     width: 70%;

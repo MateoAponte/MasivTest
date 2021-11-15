@@ -1,0 +1,32 @@
+.footer {
+  width: 100%;
+  height: 80px;
+  background-color: map-get($colors, colorFooter);
+  padding: 0px 64px;
+  box-sizing: border-box;
+  font-family: map-get($font-family, footerFont);
+  color: map-get($colors, colorWhite--1);
+  @include flexUtilities();
+  &__text {
+    font-size: map-get($heading-size, smallSize);
+    font-weight: map-get($text-weight, ligherWeight);
+    &--small {
+      font-size: map-get($text-size, smallSize);
+      font-weight: map-get($text-weight, mediumWeight);
+      margin-left: 170px;
+    }
+    &--bolder {
+      font-weight: map-get($text-weight, bolderWeight);
+    }
+  }
+  &__section {
+    width: 50%;
+    @include flexUtilities($flex-direction: column);
+    &:nth-child(1) {
+      align-items: flex-start;
+    }
+    &:nth-last-child(1) {
+      align-items: flex-end;
+    }
+  }
+}

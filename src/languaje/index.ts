@@ -1,17 +1,13 @@
-import en from "./es.json";
+import es from "./es.json";
 
 export enum Locales {
-	EN = "en",
-	FR = "fr",
+	ES = "es",
 }
 
-export const LOCALES = [
-	{ value: Locales.EN, caption: "English" },
-	{ value: Locales.FR, caption: "Français" },
-];
+export const LOCALES = [{ value: Locales.ES, caption: "English" }];
 
 export const messages = {
-	[Locales.EN]: en,
+	[Locales.ES]: es,
 };
 
-export const defaultLocale = Locales.EN;
+export const defaultLocale = Locales.ES;
