@@ -12,4 +12,8 @@ phases:
     commands:
       - aws s3 cp ./dist/js s3://www.masivtest.io/js --recursive --acl public-read
       - aws s3 cp ./dist/css s3://www.masivtest.io/css --recursive --acl public-read
-      - aws s3 cp ./dist/index.html s3://www.masivtest.io/index.html --recursive --acl public-read
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: dist
