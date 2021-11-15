@@ -55,7 +55,7 @@ export default class Favorities extends Vue {
 	}
 
 	mounted() {
-		const favoritesComics = localStorage.getItem("favorites_comics");
+		const favoritesComics = localStorage.getItem("favorites_comics") || "";
 
 		this.$store.dispatch(ComicTypes.actions.UPDATE_COMICS_ARRAY, JSON.parse(favoritesComics));
 	}

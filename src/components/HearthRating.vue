@@ -19,7 +19,6 @@
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
 import ComicTypes from "@/constants/comics/types";
-import { ComicPreviewModel } from "@/models/comics/comicModel";
 
 @Component({
 	name: "HearthRating",
