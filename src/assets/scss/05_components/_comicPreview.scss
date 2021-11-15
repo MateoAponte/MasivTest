@@ -1,6 +1,10 @@
 .comic-preview {
   @include flexUtilities($flex-direction: column);
-  width: 100%;
+  width: 50%;
+  position: relative;
+  &__body {
+    @include flexUtilities($flex-direction: column);
+  }
   &__title {
     color: map-get($colors, colorBlack--1);
     font-weight: map-get($text-weight, mediumWeight);
@@ -9,16 +13,41 @@
     margin-bottom: 20px;
   }
   &__image {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
+    border: 3px solid map-get($colors, colorBlack--1);
   }
-  &__info {
+  &__arrow {
+    position: absolute;
+    cursor: pointer;
+    color: map-get($colors, colorRed--1);
+    font-size: 45px;
+    &--left {
+      left: 140px;
+    }
+    &--right {
+      right: 140px;
+    }
   }
   &__description {
     margin-top: 12px;
+    max-width: 600px;
     color: map-get($colors, colorBlack--1);
     font-weight: map-get($text-weight, mediumWeight);
     font-size: map-get($text-size, bigSize);
     font-family: map-get($font-family, textFont);
+    text-align: center;
+  }
+  &__random {
+    margin-top: 24px;
+    border: none;
+    cursor: pointer;
+    color: map-get($colors, colorWhite--1);
+    font-weight: map-get($text-weight, mediumWeight);
+    font-size: map-get($heading-size, smallSize);
+    font-family: map-get($font-family, headingFont);
+    background-color: map-get($colors, colorRed--1);
+    padding: 12px 10px;
+    border-radius: 8px;
   }
 }

@@ -11,7 +11,8 @@ export const actions: ActionTree<ComicState, RootState> = {
 	[ComicTypes.actions.FETCH_COMICS]({ dispatch }, payload: number) {
 		ComicApi.getComicData(payload)
 			.then((res) => dispatch(ComicTypes.actions.UPDATE_COMICS_ARRAY, res.data))
-			.catch((err) => console.error("Se ha producido un error: " + err));
+			.catch((err) => console.error("Se ha producido un error: " + err))
+			.finally(() => dispatch(ComicTypes.actions.UPDATE_COMIC_NUMBER, payload));
 	},
 	[ComicTypes.actions.UPDATE_COMICS_ARRAY]({ commit }, payload: ComicPreviewModel) {
 		commit(ComicTypes.mutations.SET_PREVIEW_COMIC, payload);

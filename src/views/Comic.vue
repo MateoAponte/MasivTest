@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section class="comic">
 		<comic-preview />
 		<hearth-rating />
 	</section>
