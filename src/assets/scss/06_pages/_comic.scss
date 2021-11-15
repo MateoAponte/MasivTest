@@ -1,0 +1,3 @@
+.comic {
+  @include flexUtilities($flex-direction: column);
+}
