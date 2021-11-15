@@ -23,8 +23,17 @@ export default class ComicPreview extends Vue {
 	get comicPreview() {
 		return this.$store.state[ComicTypes.PATH].preview_comic;
 	}
+	get comicNumber() {
+		return this.$store.state[ComicTypes.PATH].comic_number;
+	}
+	get randomNumber() {
+		return Math.floor(Math.random() * (1000 - 0)) + 0;
+	}
 	mounted() {
-		this.$store.dispatch(ComicTypes.actions.FETCH_COMICS, 614);
+		this.$store.dispatch(ComicTypes.actions.FETCH_COMICS, this.comicNumber);
+	}
+	beforeMount() {
+		this.$store.dispatch(ComicTypes.actions.UPDATE_COMIC_NUMBER, this.randomNumber);
 	}
 }
 </script>
