@@ -8,6 +8,9 @@ export const mutations: MutationTree<ComicState> = {
 	[ComicTypes.mutations.SET_PREVIEW_COMIC](state, payload: ComicPreviewModel) {
 		state.preview_comic = payload;
 	},
+	[ComicTypes.mutations.SET_COMICS_ARRAY](state, payload: Array<ComicPreviewModel>) {
+		state.comics_array = payload;
+	},
 	[ComicTypes.mutations.SET_COMIC_NUMBER](state, payload: number) {
 		state.comic_number = payload;
 	},

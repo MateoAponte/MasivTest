@@ -6,10 +6,16 @@ import VueI18n from "vue-i18n";
 import { messages, defaultLocale } from "@/languaje/index";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faChevronCircleLeft, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import {
+	faChevronCircleLeft,
+	faChevronCircleRight,
+	faTrash,
+	faTimes,
+	faHeart,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faChevronCircleLeft, faChevronCircleRight);
+library.add(faChevronCircleLeft, faChevronCircleRight, faTrash, faTimes, faHeart);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
