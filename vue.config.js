@@ -1,6 +1,6 @@
 module.exports = {
 	publicPath: process.env.NODE_ENV === "production" ? "./" : "http://localhost:8080/",
-	outputDir: process.env.NODE_ENV === "production" ? "./dist" : "./",
+	outputDir: process.env.NODE_ENV === "production" ? "./dist" : "./dist",
 	assetsDir: process.env.NODE_ENV === "production" ? "./" : "./",
 
 	chainWebpack: (config) => {

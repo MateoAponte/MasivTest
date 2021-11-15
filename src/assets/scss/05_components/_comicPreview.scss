@@ -1,0 +1,24 @@
+.comic-preview {
+  @include flexUtilities($flex-direction: column);
+  width: 100%;
+  &__title {
+    color: map-get($colors, colorBlack--1);
+    font-weight: map-get($text-weight, mediumWeight);
+    font-size: map-get($heading-size, mediumSize);
+    font-family: map-get($font-family, headingFont);
+    margin-bottom: 20px;
+  }
+  &__image {
+    width: 400px;
+    height: 400px;
+  }
+  &__info {
+  }
+  &__description {
+    margin-top: 12px;
+    color: map-get($colors, colorBlack--1);
+    font-weight: map-get($text-weight, mediumWeight);
+    font-size: map-get($text-size, bigSize);
+    font-family: map-get($font-family, textFont);
+  }
+}
