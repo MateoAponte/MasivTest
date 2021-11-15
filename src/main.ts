@@ -5,6 +5,8 @@ import store from "./store";
 import VueI18n from "vue-i18n";
 import { messages, defaultLocale } from "@/languaje/index";
 
+import "@/assets/scss/main.scss";
+
 Vue.use(VueI18n);
 
 const i18n = new VueI18n({

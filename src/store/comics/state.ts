@@ -1,5 +1,7 @@
 import { ComicState } from "@/models/comics/comicState";
+import { ComicPreviewModel } from "@/models/comics/comicModel";
 
 export const state: ComicState = {
-	query: "0",
+	preview_comic: {} as ComicPreviewModel,
+	comics_array: [] as Array<ComicPreviewModel>,
 };

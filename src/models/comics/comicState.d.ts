@@ -1,3 +1,6 @@
+import { ComicPreviewModel } from "./comicModel";
+
 export interface ComicState {
-	query: string;
+	preview_comic: ComicPreviewModel;
+	comics_array: Array<ComicPreviewModel>;
 }
