@@ -11,5 +11,7 @@ export default {
 		SET_COMICS_ARRAY: "@mutation/setComicsArray",
 		SET_COMIC_NUMBER: "@mutation/setComicNumber",
 	},
-	getters: {},
+	getters: {
+		GET_COMIC_DATE: "@getters/getComicDate",
+	},
 };

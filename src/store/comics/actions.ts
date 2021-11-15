@@ -10,11 +10,14 @@ import { ComicPreviewModel } from "@/models/comics/comicModel";
 export const actions: ActionTree<ComicState, RootState> = {
 	[ComicTypes.actions.FETCH_COMICS]({ dispatch }, payload: number) {
 		ComicApi.getComicData(payload)
-			.then((res) => dispatch(ComicTypes.actions.UPDATE_COMICS_ARRAY, res.data))
+			.then((res) => dispatch(ComicTypes.actions.UPDATE_PREVIEW_COMIC, res.data))
 			.catch((err) => console.error("Se ha producido un error: " + err))
 			.finally(() => dispatch(ComicTypes.actions.UPDATE_COMIC_NUMBER, payload));
 	},
-	[ComicTypes.actions.UPDATE_COMICS_ARRAY]({ commit }, payload: ComicPreviewModel) {
+	[ComicTypes.actions.UPDATE_COMICS_ARRAY]({ commit }, payload: Array<ComicPreviewModel>) {
+		commit(ComicTypes.mutations.SET_COMICS_ARRAY, payload);
+	},
+	[ComicTypes.actions.UPDATE_PREVIEW_COMIC]({ commit }, payload: ComicPreviewModel) {
 		commit(ComicTypes.mutations.SET_PREVIEW_COMIC, payload);
 	},
 	[ComicTypes.actions.UPDATE_COMIC_NUMBER]({ commit }, payload: number) {

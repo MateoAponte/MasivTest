@@ -1,3 +1,7 @@
 .comic {
-  @include flexUtilities($flex-direction: column);
+  @include flexUtilities();
+  .preview-section {
+    width: 70%;
+    @include flexUtilities($flex-direction: column);
+  }
 }

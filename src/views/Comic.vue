@@ -1,7 +1,12 @@
 <template>
 	<section class="comic">
-		<comic-preview />
-		<hearth-rating />
+		<div class="favorites-section">
+			<favorites />
+		</div>
+		<div class="preview-section">
+			<comic-preview />
+			<hearth-rating />
+		</div>
 	</section>
 </template>
 
@@ -9,12 +14,14 @@
 import { Component, Vue } from "vue-property-decorator";
 import ComicPreview from "@/components/Preview.vue";
 import HearthRating from "@/components/HearthRating.vue";
+import Favorites from "@/components/Favorites.vue";
 
 @Component({
 	name: "Comic",
 	components: {
 		ComicPreview,
 		HearthRating,
+		Favorites,
 	},
 })
 export default class Comic extends Vue {}
